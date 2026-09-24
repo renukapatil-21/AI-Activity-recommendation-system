@@ -28,6 +28,7 @@ The application is split into independently running services:
 | Keycloak | Handles authentication and issues access tokens | OAuth 2.0 / OpenID Connect |
 | Frontend | User interface for sign-in, activity entry, and recommendations | React |
 
+
 ### Activity and recommendation flow
 
 1. A user signs in through Keycloak.
@@ -35,6 +36,8 @@ The application is split into independently running services:
 3. The Activity Service saves the activity and publishes an event to Kafka.
 4. The AI Service consumes the event and generates a recommendation using Google Gemini.
 5. The recommendation is associated with the activity and can be retrieved by the frontend.
+
+<img width="2547" height="1699" alt="image" src="https://github.com/user-attachments/assets/33c3ba3e-ce08-4583-9501-7d615364a8aa" />
 
 ## Technology Stack
 
